@@ -6,7 +6,7 @@ test('verify the authentication page', async ({ page }) => {
     await page.getByRole('button', { name: 'Login' }).click();
     await page.waitForURL('https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index');
     await page.getByRole('heading', { name: 'Dashboard' }).isVisible();
-   // await page.context().storageState({path:"./playwright/.auth/auth.json"});
+   await page.context().storageState({path:"./playwright/.auth/auth.json"});
 });
 
 
