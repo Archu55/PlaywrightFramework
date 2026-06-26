@@ -56,6 +56,7 @@ pipeline {
         ZIP_NAME = "regression-report-${env.BUILD_NUMBER}.zip"
 
         HEADLESS_FLAG = "${params.HEADLESS ? '' : '--headed'}"
+        
 
         // Mapping Jenkins parameters to environment variables
         TEST_ENV = "${params.TEST_ENV}"
@@ -87,10 +88,14 @@ pipeline {
         stage('Run Regression Suite') {
             steps {
                 echo "Running Playwright Regression Suite for Env: ${env.TEST_ENV} | Suite: ${env.SUITE} | Browser: ${env.BROWSER}"
+                
+                script {
+                    def headlessFlag = params.HEADLESS ? '' : '--headed'
 
-                bat """
-                    npx playwright test businessHomePage.spec.js --project ${env.BROWSER} ${env.HEADLESS_FLAG}
-                """
+                    bat """
+                        npx playwright test businessHomePage.spec.js --project ${params.BROWSER} ${headlessFlag}
+                    """
+                }
             }
         }
 
