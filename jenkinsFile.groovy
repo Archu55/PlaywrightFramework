@@ -68,7 +68,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git(
-                    url: 'https://github.com/Archu55/AutomationTesting.git',
+                    url: 'https://github.com/Archu55/PlaywrightFramework.git',
                     branch: 'main',
                     credentialsId: params.GiHUbCredentials
                 )
