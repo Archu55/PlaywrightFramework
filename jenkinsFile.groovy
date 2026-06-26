@@ -24,7 +24,7 @@ pipeline {
 
         choice(
             name: 'BROWSER',
-            choices: ['chrome', 'firefox', 'edge'],
+            choices: ['chromium', 'firefox', 'webkit'],
             description: 'Browser'
         )
 
