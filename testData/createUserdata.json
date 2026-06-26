@@ -1,0 +1,22 @@
+{
+  "minimalUser": {
+    "email": "data.test4@test.com",
+    "firstName": "New",
+    "lastName": "User"
+  },
+
+  "userAllDetails": {
+    "email": "newuser@example.com",
+    "phone": "+919876543210",
+    "firstName": "New",
+    "lastName": "User",
+    "kycStatus": "pending",
+    "address": {
+      "line1": "123 Main Street",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "postalCode": "400001",
+      "country": "IN"
+    }
+  }
+}
