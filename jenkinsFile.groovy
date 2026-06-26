@@ -55,7 +55,7 @@ pipeline {
         REPORT_DIR = 'playwright-report'
         ZIP_NAME = "regression-report-${env.BUILD_NUMBER}.zip"
 
-        HEADLESS_FLAG = "${params.HEADLESS ? '--headed=false' : '--headed'}"
+        HEADLESS_FLAG = "${params.HEADLESS ? '' : '--headed'}"
 
         // Mapping Jenkins parameters to environment variables
         TEST_ENV = "${params.TEST_ENV}"
