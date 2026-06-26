@@ -3,7 +3,7 @@ import {BusinessAccountHomePage} from '../pageObjectModel/lloydsBankingAutomatio
 import{ResisterPersonalDetailsPage} from '../pageObjectModel/lloydsBankingAutomation/resisterPersonalDetailsPage.js';
 import {RegisterDateOfBirthPage} from '../pageObjectModel/lloydsBankingAutomation/RegisterDateOfBirthPage.js';
 import {RegisterPersonalAddressPage} from '../pageObjectModel/lloydsBankingAutomation/RegisterPersonalAddressPage.js';
-import { use } from 'react';
+
 
 export const test=base.extend({
     businessAccountHomePage: async ({page},use ) =>{
