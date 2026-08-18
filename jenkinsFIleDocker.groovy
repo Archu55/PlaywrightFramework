@@ -113,43 +113,7 @@ pipeline {
                 bat 'docker run --rm -e HEADLESS="%HEADLESS%" playwright-tests'
             }
         }
-       /* stage('Generate & Archive Reports') {
-            steps {
-                script {
-                    try {
-                        junit '**/blob-report/*.xml'
-                    } catch (Exception e) {
-                        echo 'No JUnit XML reports found'
-                    }
-                }
-
-                archiveArtifacts(
-                    artifacts: "${REPORT_DIR}/**",
-                    allowEmptyArchive: true
-                )
-
-                publishHTML(target: [
-                    reportDir: "${REPORT_DIR}",
-                    reportFiles: 'index.html',
-                    reportName: 'Regression Report',
-                    keepAll: true,
-                    alwaysLinkToLastBuild: true,
-                    allowMissing: true
-                ])
-            }
-        }
-
-        stage('Package Reports') {
-            steps {
-                powershell """
-                    if (Test-Path '${env.ZIP_NAME}') {
-                        Remove-Item '${env.ZIP_NAME}'
-                    }
-
-                    Compress-Archive -Path '${env.REPORT_DIR}' -DestinationPath '${env.ZIP_NAME}'
-                """
-            }
-        }*/
+      
     }
 
     post {
