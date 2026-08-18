@@ -1,6 +1,6 @@
 import {test as base} from '@playwright/test';
 import {BusinessAccountHomePage} from '../pageObjectModel/lloydsBankingAutomation/BusinessAccountHomePage.js';
-import{ResisterPersonalDetailsPage} from '../pageObjectModel/lloydsBankingAutomation/resisterPersonalDetailsPage.js';
+import{ResisterPersonalDetailsPage} from '../pageObjectModel/lloydsBankingAutomation/ResisterPersonalDetailsPage.js';
 import {RegisterDateOfBirthPage} from '../pageObjectModel/lloydsBankingAutomation/RegisterDateOfBirthPage.js';
 import {RegisterPersonalAddressPage} from '../pageObjectModel/lloydsBankingAutomation/RegisterPersonalAddressPage.js';
 

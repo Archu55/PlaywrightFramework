@@ -41,7 +41,7 @@ export default defineConfig({
     //video:"retain-on-failure",
     video:"on",
     launchOptions: {
-      headless: false,
+      headless: true,
       slowMo: 1000,
   }},
    /* Projects map directly to the BROWSER parameter passed in Jenkins job. (`--project=%BROWSER%`) */
