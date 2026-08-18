@@ -113,7 +113,7 @@ pipeline {
                 bat 'docker run --rm -e HEADLESS="%HEADLESS%" playwright-tests'
             }
         }
-        stage('Generate & Archive Reports') {
+       /* stage('Generate & Archive Reports') {
             steps {
                 script {
                     try {
@@ -149,7 +149,7 @@ pipeline {
                     Compress-Archive -Path '${env.REPORT_DIR}' -DestinationPath '${env.ZIP_NAME}'
                 """
             }
-        }
+        }*/
     }
 
     post {
